@@ -1,7 +1,7 @@
 from .alkalineplugin import AlkalinePlugin
 import discord, random, asyncio, re
 
-class gaydar(AlkalinePlugin):
+class GayDAR(AlkalinePlugin):
 
 	def __init__(self, client):
 		self.client = client
@@ -30,29 +30,30 @@ class gaydar(AlkalinePlugin):
 				await message.channel.send('I don\'t know who that is...')
 				return
 			
-	gayness = random.randint(1,100)
-	if 0<=gayness<25:
-		message.channel.send(subject + ' is not gay.')
-	elif 25<=gayness<45:
-		message.channel.send(subject + ' is a little bit curious.')
-	elif 45<=gayness<65:
-		message.channel.send(subject + ' bats for both teams.')
-	elif 65<=gayness<75:
-		message.channel.send(subject + ' can\'t deny their interests.')
-	elif 75<=gayness<85:
-		message.channel.send(subject + ' can\t hold back their intense desire.')
-	elif 85<=gayness<99:
-		message.channel.send(subject + ' is so gay, they can\'t pray the gay away.')
-	else 99<=gayness<100:
-		message.channel.send(subject + ' is gayer than your paster from spirit camp.')
+			# determine gayness
+			gayness = random.randint(1,100)
+			
+			if 0<=gayness<25:
+				message.channel.send(subject + ' is not gay.')
+			elif 25<=gayness<45:
+				message.channel.send(subject + ' is a little bit curious.')
+			elif 45<=gayness<65:
+				message.channel.send(subject + ' bats for both teams.')
+			elif 65<=gayness<75:
+				message.channel.send(subject + ' can\'t deny their interests.')
+			elif 75<=gayness<85:
+				message.channel.send(subject + ' can\t hold back their intense desire.')
+			elif 85<=gayness<99:
+				message.channel.send(subject + ' is so gay, they can\'t pray the gay away.')
+			else 99<=gayness<100:
+				message.channel.send(subject + ' is gayer than your paster from spirit camp.')
 	
 	
 		
-plugins = [gaydar]
+plugins = [GayDAR]
 commands = {
 	'GayDAR': {
 		'usage':'[me|@user] is [%gay]',
 		'example': 'User is very gay.'
 	}
 }
-
