@@ -32,33 +32,44 @@ class gaydar(AlkalinePlugin):
 				return
 			
 
+			if str(subject.id) == '408521026239070218' :
+				await message.channel.send('<@' + str(subject.id) + '> not sure maybe we could find out over coffee sometime? ( ͡° ͜ʖ ͡°)')
 			
-			if str(subject.id) == '182411730435964928' :
-				await message.channel.send('<@' + str(subject.id) + '> is not gay.')
-			
-			elif str(subject.id) == '181227668241383425' :
-				await message.channel.send('<@' + str(subject.id) + '> is so gay they stuck a 20 up there, but they got a thank you note back.')
 			else :
 				# determine gayness
 				gayness = random.randint(1,100)
 				
-				if 0<=gayness<25:
-					await message.channel.send('<@' + str(subject.id) + '> is not gay.')
-				elif 25<=gayness<45:
+				if 1<=gayness<35:
+					await message.channel.send('<@' + str(subject.id) + '> is definitely not gay.')
+				elif 35<=gayness<40:
 					await message.channel.send('<@' + str(subject.id) + '> is a little bit curious.')
-				elif 45<=gayness<65:
+				elif 40<=gayness<45:
+					await message.channel.send('<@' + str(subject.id) + '> is so gay they stuck a 20 up there, and got a thank you note back.')
+				elif 45<=gayness<50:
+					await message.channel.send('<@' + str(subject.id) + '> swings both ways due to their desperate loneliness.')
+				elif 50<=gayness<55:
+					await message.channel.send('<@' + str(subject.id) + '> is as straight as a sickle.')
+				elif 55<=gayness<65:
 					await message.channel.send('<@' + str(subject.id) + '> bats for both teams.')
 				elif 65<=gayness<75:
 					await message.channel.send('<@' + str(subject.id) + '> can\'t deny their vile obsession.')
-				elif 75<=gayness<85:
-					await message.channel.send('<@' + str(subject.id) + '> can\'t hold back their intense desire.')
-				elif 85<=gayness<99:
+				elif 75<=gayness<80:
+					await message.channel.send('<@' + str(subject.id) + '> can\'t hold back their intense desire for the dick.')
+				elif 80<=gayness<90:
 					await message.channel.send('<@' + str(subject.id) + '> is so gay, they can\'t pray the gay away.')
-				elif 99<=gayness<100:
+				elif 90<=gayness<91:
 					await message.channel.send('<@' + str(subject.id) + '> is gayer than your paster from spirit camp.')
-	
-	
-		
+				elif 91<=gayness<92:
+					await message.channel.send('<@' + str(subject.id) + '> isn\'t gay, but you\'re gay though.')
+				elif 92<=gayness<93:
+					await message.channel.send('<@' + str(subject.id) + '> isn\'t gay, but is a weeb so... same thing I guess.')
+				elif 93<=gayness<94:
+					await message.channel.send('<@' + str(subject.id) + '> is your paster from spirit camp. monkaS')
+				elif 94<=gayness<95:
+					await message.channel.send('<@' + str(subject.id) + '> is gay due to being raped by their mom\'s friend.')
+					await message.channel.send('f in chat to pay respects to' + '<@' + str(subject.id) + '>')
+				elif 95<=gayness<100:
+					await message.channel.send('<@' + str(subject.id) + '> is gay, and secretly a tiktok trap.')
 plugins = [gaydar]
 commands = {
 	'gaydar': {
