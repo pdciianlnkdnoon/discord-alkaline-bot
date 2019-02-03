@@ -30,8 +30,11 @@ class gaydar(AlkalinePlugin):
 			if type(subject) == str:
 				await message.channel.send('I don\'t know who that is...')
 				return
-			
-
+				
+			await message.channel.send('Please wait, I\'ll do a quick scan.')	
+			await asyncio.sleep(0.5)
+			await message.channel.send('`beep beep`')
+			await asyncio.sleep(1)
 			if str(subject.id) == '408521026239070218' :
 				await message.channel.send('<@' + str(subject.id) + '> not sure maybe we could find out over coffee sometime? ( ͡° ͜ʖ ͡°)')
 			
@@ -66,7 +69,7 @@ class gaydar(AlkalinePlugin):
 				elif 93<=gayness<94:
 					await message.channel.send('<@' + str(subject.id) + '> is your paster from spirit camp. monkaS')
 				elif 94<=gayness<95:
-					await message.channel.send('<@' + str(subject.id) + '> is gay due to being raped by their mom\'s friend.')
+					await message.channel.send('<@' + str(subject.id) + '> is gay due to being baguetted by their family.')
 					await message.channel.send('f in chat to pay respects to' + '<@' + str(subject.id) + '>')
 				elif 95<=gayness<100:
 					await message.channel.send('<@' + str(subject.id) + '> is gay, and secretly a tiktok trap.')
